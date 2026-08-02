@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>College Admission Form</title>
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width:400px;
+    margin:80px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    color:#007bff;
+}
+
+label{
+    font-weight:bold;
+}
+
+input[type=text],
+input[type=number]{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+input[type=submit]{
+    width:100%;
+    padding:10px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+input[type=submit]:hover{
+    background:#0056b3;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>College Admission Form</h1>
+
+<form th:action="@{/admission}" method="post">
+
+<label>Student Name</label>
+
+<input type="text"
+       name="studentName"
+       required>
+
+<label>Roll Number</label>
+
+<input type="number"
+       name="rollNumber"
+       required>
+
+<label>Course</label>
+
+<input type="text"
+       name="course"
+       required>
+
+<input type="submit"
+       value="Admission">
+
+</form>
+
+</div>
+
+</body>
+</html>

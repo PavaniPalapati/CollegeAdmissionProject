@@ -20,7 +20,6 @@ public class CollegeController {
                             Model model) {
 
         model.addAttribute("student", student);
-
         return "success";
     }
 
